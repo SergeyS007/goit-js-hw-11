@@ -1,0 +1,49 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.photo-card {
+  width: 300px;
+  height: 250px;
+}
+.thumb img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+.info-item {
+  text-align: center;
+  width: 50px;
+  font-size: 10px;
+}
+.search-form {
+  height: 40px;
+  background-color: #f5dd28;
+  justify-content: center;
+  display: flex;
+}
+button {
+  font-size: 16;
+  background-color: rgb(253, 162, 5);
+  color: rgb(14, 2, 2);
+}
+.gallery-link {
+  text-decoration: none;
+  color: black;
+}
+.load-more {
+  display: block;
+  background-color: rgb(78, 241, 78);
+  margin-right: auto;
+  margin-left: auto;
+  color: black;
+}
+.is-hidden {
+  display: none;
+}
