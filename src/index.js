@@ -64,7 +64,7 @@ function renderImages(images) {
         return `
           <a  class="gallery-link" href="${largeImageURL}">
 <div class="photo-card">
-  <img src="${webformatURL}" alt=${tags} loading="lazy" width=300px height=200px/>
+  <img src="${webformatURL}" alt="${tags}" loading="lazy" width=300px height=200px/>
   <div class="info">
     <p class="info-item">
       <b>Likes: ${likes}</b>
