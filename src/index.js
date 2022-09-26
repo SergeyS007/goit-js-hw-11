@@ -7,6 +7,11 @@ const galleryImages = document.querySelector('.gallery');
 const form = document.querySelector('.search-form');
 const loadMoreButton = document.querySelector('.load-more');
 const newsAPIService = new NewsApiService();
+const galleryLightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+  animationSpeed: 250,
+});
 
 loadMoreButton.classList.add('is-hidden');
 
@@ -25,11 +30,7 @@ function onSubmit(event) {
   }
   newsAPIService.fetchImages().then(images => {
     renderImages(images.hits);
-    new SimpleLightbox('.gallery a', {
-      captionsData: 'alt',
-      captionDelay: 250,
-      animationSpeed: 250,
-    });
+    galleryLightbox.refresh();
     if (images.total > 0) {
       loadMoreButton.classList.remove('is-hidden');
     }
@@ -40,11 +41,7 @@ function onSubmit(event) {
 function onLoadMore() {
   newsAPIService.fetchImages().then(images => {
     renderImages(images.hits);
-    new SimpleLightbox('.gallery a', {
-      captionsData: 'alt',
-      captionDelay: 250,
-      animationSpeed: 250,
-    });
+    galleryLightbox.refresh();
   });
 }
 
